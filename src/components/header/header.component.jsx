@@ -8,21 +8,31 @@ const Header = () => (
   <header>
     <LogoLink />
     <div className="options">
-      <Link className="option" to="/about">
-        About
-      </Link>
-      <Link className="option" to="/features">
-        Features
-      </Link>
-      <Link className="option" to="/pricing">
-        Pricing
-      </Link>
-      <Link className="option" to="/testimonials">
-        Testimonials
-      </Link>
-      <Link className="option" to="/help">
-        Help
-      </Link>
+      <div className="anim">
+        <Link className="option" to="/about">
+          About
+        </Link>
+      </div>
+      <div className="anim">
+        <Link className="option" to="/features">
+          Features
+        </Link>
+      </div>
+      <div className="anim">
+        <Link className="option" to="/pricing">
+          Pricing
+        </Link>
+      </div>
+      <div className="anim">
+        <Link className="option" to="/testimonials">
+          Testimonials
+        </Link>
+      </div>
+      <div className="anim">
+        <Link className="option" to="/help">
+          Help
+        </Link>
+      </div>
     </div>
     <div className="sign-in-sign-up-container">
       <Link className="sign-in" to="sign-in">

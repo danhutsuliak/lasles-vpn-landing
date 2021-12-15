@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Logo from '../logo-link/logo-link.component';
 
 import './footer.styles.scss';
@@ -12,24 +13,23 @@ const Footer = () => (
         that has unique features and has high security.
       </p>
       <div className="social-icons">
-        <img
-          className="icon"
-          src="./images/facebook.svg"
-          alt="facebook"
-          href="https://facebook.com/"
-        ></img>
-        <img
-          className="icon"
-          src="./images/twitter.svg"
-          alt="twitter"
-          href="https://twitter.com/"
-        ></img>
-        <img
-          className="icon"
-          src="./images/instagram.svg"
-          alt="instagram"
-          href="https://instagram.com/"
-        ></img>
+        <a href="https://facebook.com/">
+          <img
+            className="icon"
+            src="./images/facebook.svg"
+            alt="facebook"
+          ></img>
+        </a>
+        <a href="https://twitter.com/">
+          <img className="icon" src="./images/twitter.svg" alt="twitter"></img>
+        </a>
+        <a href="https://instagram.com/">
+          <img
+            className="icon"
+            src="./images/instagram.svg"
+            alt="instagram"
+          ></img>
+        </a>
       </div>
       <p className="copyright">
         ©2020Lasles<span>VPN</span>
@@ -38,26 +38,54 @@ const Footer = () => (
     <div className="options">
       <div className="block">
         <h4>Product</h4>
-        <p>Download</p>
-        <p>Pricing</p>
-        <p>Locations</p>
-        <p>Server</p>
-        <p>Countries</p>
-        <p>Blog</p>
+        <div className="anim">
+          <Link to="download">Download</Link>
+        </div>
+        <div className="anim">
+          <Link to="/">Pricing</Link>
+        </div>
+        <div className="anim">
+          <Link to="/">Locations</Link>
+        </div>
+        <div className="anim">
+          <Link to="/">Server</Link>
+        </div>
+        <div className="anim">
+          <Link to="/">Countries</Link>
+        </div>
+        <div className="anim">
+          <Link to="/">Blog</Link>
+        </div>
       </div>
       <div className="block">
         <h4>Engage</h4>
-        <p>LaslesVPN ?</p>
-        <p>FAQ</p>
-        <p>Tutorials</p>
-        <p>About Us</p>
-        <p>Privacy Policy</p>
-        <p>Terms of Service</p>
+        <div className="anim">
+          <Link to="/">LaslesVPN ?</Link>
+        </div>
+        <div className="anim">
+          <Link to="/">FAQ</Link>
+        </div>
+        <div className="anim">
+          <Link to="/">Tutorials</Link>
+        </div>
+        <div className="anim">
+          <Link to="/">About Us</Link>
+        </div>
+        <div className="anim">
+          <Link to="/">Privacy Policy</Link>
+        </div>
+        <div className="anim">
+          <Link to="/">Terms of Service</Link>
+        </div>
       </div>
       <div className="block">
         <h4>Earn Money</h4>
-        <p>Affiliate</p>
-        <p>Become Partner</p>
+        <div className="anim">
+          <Link to="/">Affiliate</Link>
+        </div>
+        <div className="anim">
+          <Link to="/">Become Partner</Link>
+        </div>
       </div>
     </div>
   </footer>

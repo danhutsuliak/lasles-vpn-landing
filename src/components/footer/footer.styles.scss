@@ -49,6 +49,31 @@ footer {
       flex-direction: column;
       row-gap: 1.2rem;
 
+      a {
+        text-decoration: none;
+        color: #4f5665;
+      }
+
+      .anim > a {
+        position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 1.8px;
+          bottom: 0;
+          margin: -5px 0;
+          background-color: #4f5665;
+          visibility: hidden;
+          transform: scaleX(0);
+          transition: all 0.4s ease-in-out 0s;
+        }
+        &:hover:before {
+          visibility: visible;
+          transform: scaleX(1);
+        }
+      }
+
       h4 {
         font-size: 18px;
         font-weight: 500;
