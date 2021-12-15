@@ -10,7 +10,7 @@ const Stats = () => (
   <div className="stats">
     <div className="stat">
       <UserSVG />
-      <div className="text">
+      <div className="stat-text">
         <div className="">
           <h2>90+</h2>
           <p>Users</p>
@@ -22,7 +22,7 @@ const Stats = () => (
 
     <div className="stat">
       <LocationSVG />
-      <div className="text">
+      <div className="stat-text">
         <h2>30+</h2>
         <p>Locations</p>
       </div>
@@ -32,7 +32,7 @@ const Stats = () => (
 
     <div className="stat">
       <ServerSVG />
-      <div className="text">
+      <div className="stat-text">
         <h2>50+</h2>
         <p>Servers</p>
       </div>

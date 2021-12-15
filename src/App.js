@@ -1,5 +1,5 @@
 import './App.scss';
-import Hero from './components/hero/hero.component';
+
 import Header from './components/header/header.component';
 import Stats from './components/stats/stats.component';
 import Features from './components/features/features.component';
@@ -9,13 +9,14 @@ import Testimonials from './components/testimonials/testimonials.component';
 import { TESTIMONIAL_DATA } from './data/testimonial.data';
 import Footer from './components/footer/footer.component';
 import SubscribeNow from './components/subscribe-now/subscribe-now.component';
+import Landing from './components/landing/landing.component';
 
 function App() {
   return (
     <div className='app'>
       <section className='white-bg-color'>
         <Header />
-        <Hero />
+        <Landing />
         <Stats />
         <Features />
       </section>

@@ -1,17 +1,12 @@
 import React from 'react';
+import Logo from '../logo-link/logo-link.component';
 
 import './footer.styles.scss';
-import { ReactComponent as Logo } from '../../assets/logo.svg';
 
 const Footer = () => (
   <footer>
     <div className="about">
-      <div className="logo-container">
-        <Logo />
-        <div className="logo-text">
-          Lasles<span className="bold">VPN</span>
-        </div>
-      </div>
+      <Logo />
       <p className="description">
         <span className="bold">LaslesVPN</span> is a private virtual network
         that has unique features and has high security.

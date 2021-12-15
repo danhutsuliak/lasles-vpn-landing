@@ -9,8 +9,8 @@ import { ReactComponent as CustomMarker } from '../../assets/plan-marker.svg';
 const ChooseYourPlan = () => (
   <div className="choose-your-plan">
     <div className="text-container">
-      <h2>Choose Your Plan</h2>
-      <p>
+      <h2 className="header">Choose Your Plan</h2>
+      <p className="sub-header">
         Let's choose the package that is best for you and explore it happily and
         cheerfully.
       </p>

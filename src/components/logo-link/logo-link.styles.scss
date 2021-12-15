@@ -1,0 +1,19 @@
+.logo {
+  display: flex;
+  width: 200px;
+  margin: 0;
+  text-decoration: none;
+  color: #0b132a;
+
+  .logo-text {
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: 500;
+    margin-left: 10px;
+    user-select: none;
+
+    .bold {
+      font-weight: 700;
+    }
+  }
+}

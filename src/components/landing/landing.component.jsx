@@ -1,15 +1,15 @@
 import React from 'react';
 
-import './hero.styles.scss';
+import './landing.styles.scss';
 import personBrowsing from '../../assets/person-browsing.png';
 
-const Hero = () => (
-  <div className="hero">
+const Landing = () => (
+  <div className="landing">
     <div className="info-container">
-      <h1 className="main-text">
+      <h1 className="header">
         Want anything to be easy with <span className="bold">LaslesVPN.</span>
       </h1>
-      <p>
+      <p className="sub-header">
         Provide a network for all your needs with ease and fun using
         <span className="bold"> LaslesVPN </span>
         discover interesting features from us.
@@ -22,4 +22,4 @@ const Hero = () => (
   </div>
 );
 
-export default Hero;
+export default Landing;

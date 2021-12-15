@@ -5,11 +5,24 @@ header {
   margin-top: 2%;
   margin-bottom: 10%;
 
-  *:hover {
-    cursor: pointer;
+  * {
+    text-decoration: none;
+    user-select: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:visited {
+      color: #0b132a;
+    }
+
+    &:link {
+      color: #0b132a;
+    }
   }
 
-  .logo-container {
+  .logo {
     display: flex;
     width: 200px;
     margin: 0;

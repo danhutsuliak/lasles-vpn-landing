@@ -1,4 +1,4 @@
-.hero {
+.landing {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -9,7 +9,7 @@
       font-weight: 700;
     }
 
-    .main-text {
+    .header {
       display: block;
       width: 555px;
       font-style: normal;
@@ -18,7 +18,7 @@
       line-height: 70px;
     }
 
-    p {
+    .sub-header {
       width: 570px;
       font-size: 17px;
       line-height: 30px;
@@ -47,7 +47,6 @@
     img {
       width: 611.24px;
       height: 382.44px;
-      cursor: initial;
     }
   }
 }

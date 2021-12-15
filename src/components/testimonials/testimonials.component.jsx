@@ -20,8 +20,8 @@ const Testimonials = ({ testimonials }) => {
   return (
     <div className="testimonials">
       <div className="text-container">
-        <h2>Trusted by Thousands of Happy Customer</h2>
-        <p className="subheader">
+        <h2 className="header">Trusted by Thousands of Happy Customer</h2>
+        <p className="sub-header">
           These are the stories of our customers who have joined us with great
           pleasure when using this crazy feature.
         </p>
