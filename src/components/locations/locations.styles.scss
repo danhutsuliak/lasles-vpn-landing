@@ -1,0 +1,35 @@
+.locations {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    text-align: center;
+    width: 390px;
+    font-weight: 500;
+    font-size: 35px;
+  }
+
+  p {
+    width: 555px;
+    margin: 0;
+    margin-bottom: 160px;
+    text-align: center;
+    color: #4f5665;
+
+    span {
+      font-weight: 500;
+    }
+  }
+
+  img {
+    width: 1060px;
+    height: 540px;
+  }
+
+  .companies {
+    margin-top: 30px;
+    width: 1135.64px;
+    height: 208.32px;
+  }
+}

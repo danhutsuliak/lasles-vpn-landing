@@ -1,0 +1,42 @@
+.features {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10%;
+
+  img {
+    width: 550px;
+    height: 440px;
+  }
+
+  .info-container {
+    margin: 0;
+    width: 400px;
+
+    h1 {
+      line-height: 143%;
+      font-size: 35px;
+      font-weight: 500;
+    }
+
+    p {
+      line-height: 187%;
+      color: #4f5665;
+      margin-bottom: 22px;
+    }
+
+    ul {
+      padding: 0;
+
+      .list-item {
+        font-size: 15px;
+        color: #4f5665;
+        margin-bottom: 17px;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        gap: 0.6rem;
+      }
+    }
+  }
+}

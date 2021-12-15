@@ -1,0 +1,53 @@
+.hero {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10%;
+
+  .info-container {
+    .bold {
+      font-weight: 700;
+    }
+
+    .main-text {
+      display: block;
+      width: 555px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 52px;
+      line-height: 70px;
+    }
+
+    p {
+      width: 570px;
+      font-size: 17px;
+      line-height: 30px;
+      color: #4f5665;
+    }
+
+    button {
+      width: 270px;
+      height: 65px;
+      margin-top: 30px;
+      background-color: #f53838;
+      color: white;
+      border-radius: 10px;
+      border: none;
+      font-weight: 700;
+      font-family: 'Rubik';
+      box-shadow: -5px 25px 54px -20px rgba(245, 56, 85, 1);
+    }
+  }
+
+  .img-container {
+    margin-right: -55px;
+    width: 611.24px;
+    height: 382.44px;
+
+    img {
+      width: 611.24px;
+      height: 382.44px;
+      cursor: initial;
+    }
+  }
+}

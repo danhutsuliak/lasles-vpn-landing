@@ -1,0 +1,121 @@
+.choose-your-plan {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  margin-bottom: 10%;
+
+  .text-container {
+    display: flex;
+    width: 555px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h2 {
+      font-size: 35px;
+      font-weight: 500;
+      line-height: 50px;
+      margin-bottom: 30px;
+    }
+
+    p {
+      margin: 0;
+      margin-bottom: 70px;
+      color: #4f5665;
+    }
+  }
+
+  .plan-cards-container {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .plan-card {
+      width: 27.5%;
+      height: 620px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 60px;
+      padding-bottom: 60px;
+      border: 2px solid #dddddd;
+      border-radius: 10px;
+
+      .card-top {
+        height: 500px;
+        display: flex;
+        row-gap: 1.3rem;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+          width: 145px;
+          height: 165px;
+        }
+
+        h3 {
+          font-size: 18px;
+          font-weight: 500;
+          text-align: center;
+        }
+
+        ul {
+          margin: 0;
+          padding: 0;
+
+          .list-item {
+            font-size: 15px;
+            color: #4f5665;
+            margin-bottom: 17px;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            gap: 0.6rem;
+          }
+        }
+      }
+
+      .card-bottom {
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+          font-size: 25px;
+          font-weight: 500;
+
+          span {
+            color: #4f5665;
+            font-weight: 400;
+          }
+        }
+
+        .button {
+          width: 180px;
+          height: 45px;
+          text-align: center;
+          vertical-align: middle;
+          line-height: 45px;
+          background-color: #fff;
+          color: #f53855;
+          border: 2px solid #f53855;
+          border-radius: 50px;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .premium {
+      border: 2px solid #f53838;
+
+      .card-bottom .button {
+        background: #f53838;
+        color: #fff;
+      }
+    }
+  }
+}

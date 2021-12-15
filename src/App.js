@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Hero from './components/hero/hero.component';
+import Header from './components/header/header.component';
+import Stats from './components/stats/stats.component';
+import Features from './components/features/features.component';
+import ChooseYourPlan from './components/choose-your-plan/choose-your-plan.component';
+import Locations from './components/locations/locations.component';
+import Testimonials from './components/testimonials/testimonials.component';
+import { TESTIMONIAL_DATA } from './data/testimonial.data';
+import Footer from './components/footer/footer.component';
+import SubscribeNow from './components/subscribe-now/subscribe-now.component';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <section className='white-bg-color'>
+        <Header />
+        <Hero />
+        <Stats />
+        <Features />
+      </section>
+      <section className='darker-bg-color'>
+        <ChooseYourPlan />
+        <Locations />
+        <Testimonials testimonials={TESTIMONIAL_DATA.testimonials} />
+      </section>
+      <SubscribeNow />
+      <Footer />
     </div>
   );
 }
