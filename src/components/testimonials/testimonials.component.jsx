@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { TestimonialContext } from '../../contexts/testimonial.context';
 import Testimonial from '../testimonial/testimonial.component';
 
 import './testimonials.styles.scss';
 
-const Testimonials = ({ testimonials }) => {
+const Testimonials = () => {
   const [activeIndex, setActiveIndex] = useState(0.375);
+  const { testimonials } = useContext(TestimonialContext);
 
   const carouselStep = 0.1875;
 
@@ -33,6 +35,7 @@ const Testimonials = ({ testimonials }) => {
         >
           {testimonials.map((t) => (
             <Testimonial
+              key={t.id}
               name={t.name}
               location={t.location}
               image={t.image}
@@ -45,19 +48,21 @@ const Testimonials = ({ testimonials }) => {
       </div>
       <div className="indicators">
         <div className="page-count">
-          <div
-            className={`circle ${activeIndex === 0.375 ? 'current' : ''}`}
-          ></div>
+          <div className={`circle ${activeIndex === 0.375 ? 'current' : ''}`} />
+
           <div
             className={`circle ${activeIndex === 0.1875 ? 'current' : ''}`}
-          ></div>
-          <div className={`circle ${activeIndex === 0 ? 'current' : ''}`}></div>
+          />
+
+          <div className={`circle ${activeIndex === 0 ? 'current' : ''}`} />
+
           <div
             className={`circle ${activeIndex === -0.1875 ? 'current' : ''}`}
-          ></div>
+          />
+
           <div
             className={`circle ${activeIndex === -0.375 ? 'current' : ''}`}
-          ></div>
+          />
         </div>
 
         <div className="buttons">

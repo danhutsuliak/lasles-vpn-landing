@@ -6,12 +6,12 @@ import Stats from '../../components/stats/stats.component';
 
 import './about.styles.scss';
 
-const About = () => (
+const AboutPage = () => (
   <div className="about">
-    <Features />
-    <Stats />
     <Locations />
+    <Stats />
+    <Features />
   </div>
 );
 
-export default About;
+export default AboutPage;

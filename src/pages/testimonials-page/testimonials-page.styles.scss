@@ -1,0 +1,36 @@
+.testimonials-page {
+  margin-top: -3%;
+
+  .heading-text-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .header {
+      width: 480px;
+      margin-bottom: 30px;
+    }
+
+    .sub-header {
+      width: 555px;
+      margin: 0;
+      margin-bottom: 70px;
+    }
+  }
+
+  .testimonials-container {
+    .testimonial {
+      width: 710px;
+      gap: 1.2rem;
+      border: #dddddd 2px solid;
+    }
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: space-around;
+    margin-bottom: 10%;
+  }
+}
