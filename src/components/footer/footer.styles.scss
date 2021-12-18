@@ -1,10 +1,21 @@
 footer {
-  background: #f8f8f8;
   display: flex;
   justify-content: space-between;
-  padding: 180px 150px 100px 150px;
+  position: relative;
+  padding-top: 180px;
+  padding-bottom: 100px;
 
-  .about {
+  .footer-bg {
+    position: absolute;
+    z-index: -3;
+    background: #f8f8f8;
+    left: -10vw;
+    top: 0px;
+    height: 100%;
+    width: 98.9vw;
+  }
+
+  .about-block {
     width: 340px;
 
     p {

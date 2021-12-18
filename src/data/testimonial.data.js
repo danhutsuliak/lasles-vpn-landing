@@ -1,6 +1,7 @@
 export const TESTIMONIAL_DATA = {
   testimonials: [
     {
+      id: 1,
       name: "Viezh Robert",
       location: "Warsaw, Poland",
       image: './images/user1.png',
@@ -9,6 +10,7 @@ export const TESTIMONIAL_DATA = {
       isRed: true
     },
     {
+      id: 2,
       name: "Yessica Christy",
       location: "Shanxi, China",
       image: './images/user2.png',
@@ -17,6 +19,7 @@ export const TESTIMONIAL_DATA = {
       isRed: false
     },
     {
+      id: 3,
       name: "Kim Young Jou",
       location: "Seoul, South Korea",
       image: './images/user3.png',
@@ -25,6 +28,7 @@ export const TESTIMONIAL_DATA = {
       isRed: false
     },
     {
+      id: 4,
       name: "Kim Young Jou",
       location: "Seoul, South Korea",
       image: './images/user3.png',
@@ -33,6 +37,7 @@ export const TESTIMONIAL_DATA = {
       isRed: false
     },
     {
+      id: 5,
       name: "Kim Young Jou",
       location: "Seoul, South Korea",
       image: './images/user3.png',
@@ -41,6 +46,7 @@ export const TESTIMONIAL_DATA = {
       isRed: false
     },
     {
+      id: 6,
       name: "Kim Young Jou",
       location: "Seoul, South Korea",
       image: './images/user3.png',
@@ -49,6 +55,7 @@ export const TESTIMONIAL_DATA = {
       isRed: false
     },
     {
+      id: 7,
       name: "Kim Young Jou",
       location: "Seoul, South Korea",
       image: './images/user3.png',
@@ -57,6 +64,7 @@ export const TESTIMONIAL_DATA = {
       isRed: false
     },
     {
+      id: 8,
       name: "Kim Young Jou",
       location: "Seoul, South Korea",
       image: './images/user3.png',
@@ -65,6 +73,7 @@ export const TESTIMONIAL_DATA = {
       isRed: false
     },
     {
+      id: 9,
       name: "Kim Young Jou",
       location: "Seoul, South Korea",
       image: './images/user3.png',
@@ -73,6 +82,7 @@ export const TESTIMONIAL_DATA = {
       isRed: false
     },
     {
+      id: 10,
       name: "Kim Young Jou",
       location: "Seoul, South Korea",
       image: './images/user3.png',

@@ -1,0 +1,14 @@
+.darker-bg-color {
+  padding-top: 70px;
+  // background: linear-gradient(#fafafa, #ffffff);
+  height: max-content;
+}
+
+.bg {
+  position: absolute;
+  z-index: -3;
+  left: 0vw;
+  background: linear-gradient(#fafafa, #ffffff);
+  height: 100%;
+  width: 98.9vw;
+}

@@ -6,7 +6,8 @@ import './footer.styles.scss';
 
 const Footer = () => (
   <footer>
-    <div className="about">
+    <div className="footer-bg"></div>
+    <div className="about-block">
       <Logo />
       <p className="description">
         <span className="bold">LaslesVPN</span> is a private virtual network

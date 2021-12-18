@@ -1,4 +1,5 @@
 .app {
+  padding: 0 10%;
   padding-top: 0.5%;
   font-family: 'Rubik', sans-serif;
   overflow: hidden;
@@ -17,14 +18,4 @@
       font-weight: 500;
     }
   }
-}
-
-section {
-  padding: 0 10%;
-}
-
-.darker-bg-color {
-  padding-top: 70px;
-  background: linear-gradient(#fafafa, #ffffff);
-  height: max-content;
 }
