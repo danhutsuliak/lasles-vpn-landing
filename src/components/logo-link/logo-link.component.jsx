@@ -5,7 +5,7 @@ import { ReactComponent as LogoImg } from '../../assets/logo.svg';
 import './logo-link.styles.scss';
 
 const LogoLink = () => (
-  <Link className="logo" to="/">
+  <Link className="logo" to="/lasles-vpn-landing">
     <LogoImg />
     <div className="logo-text">
       Lasles<span className="bold">VPN</span>

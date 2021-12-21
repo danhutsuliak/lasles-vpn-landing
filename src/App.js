@@ -12,7 +12,7 @@ function App() {
   return (
     <div className='app'>
       <Routes>
-        <Route path='/' element={<Layout />}>
+        <Route path='/lasles-vpn-landing' element={<Layout />}>
           <Route index element={<LandingPage />} />
           <Route path='about' element={<About />} />
           <Route path='features' element={<FeaturesPage />} />

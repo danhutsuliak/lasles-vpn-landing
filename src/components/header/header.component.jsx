@@ -9,27 +9,27 @@ const Header = () => (
     <LogoLink />
     <div className="options">
       <div className="anim">
-        <Link className="option" to="/about">
+        <Link className="option" to="about">
           About
         </Link>
       </div>
       <div className="anim">
-        <Link className="option" to="/features">
+        <Link className="option" to="features">
           Features
         </Link>
       </div>
       <div className="anim">
-        <Link className="option" to="/pricing">
+        <Link className="option" to="pricing">
           Pricing
         </Link>
       </div>
       <div className="anim">
-        <Link className="option" to="/testimonials">
+        <Link className="option" to="testimonials">
           Testimonials
         </Link>
       </div>
       <div className="anim">
-        <Link className="option" to="/help">
+        <Link className="option" to="help">
           Help
         </Link>
       </div>
