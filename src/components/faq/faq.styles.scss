@@ -1,0 +1,46 @@
+.faq {
+  max-width: 800px;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #eeeff2;
+  cursor: pointer;
+
+  .question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      transition: 1.4s;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.4s ease;
+
+    p {
+      padding-top: 0.2rem;
+      line-height: 1.4;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.active {
+  .question svg {
+    transform: rotate(180deg);
+    transition: 1.4s;
+  }
+
+  .answer {
+    max-height: 300px;
+  }
+}

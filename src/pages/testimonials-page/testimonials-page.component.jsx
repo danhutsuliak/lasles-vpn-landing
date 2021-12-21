@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import SubscribeNow from '../../components/subscribe-now/subscribe-now.component';
 import Testimonial from '../../components/testimonial/testimonial.component';
-import { TestimonialContext } from '../../contexts/testimonial.context';
+import { TestimonialContext } from '../../contexts/testimonial.context.js';
 
 import './testimonials-page.styles.scss';
 
