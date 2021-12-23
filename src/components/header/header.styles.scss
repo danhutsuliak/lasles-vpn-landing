@@ -3,7 +3,7 @@ header {
   justify-content: space-between;
   height: 45px;
   margin-top: 2%;
-  margin-bottom: 10%;
+  margin-bottom: 3%;
 
   * {
     text-decoration: none;
@@ -87,11 +87,11 @@ header {
     font-weight: 500;
     font-size: 18px;
 
-    .sign-in {
+    .sign-in-button {
       width: max-content;
     }
 
-    .sign-up {
+    .sign-up-button {
       width: 150px;
       height: 45px;
       text-align: center;

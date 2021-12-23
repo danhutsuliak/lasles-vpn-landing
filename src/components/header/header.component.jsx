@@ -35,10 +35,10 @@ const Header = () => (
       </div>
     </div>
     <div className="sign-in-sign-up-container">
-      <Link className="sign-in" to="sign-in">
+      <Link className="sign-in-button" to="sign-in">
         Sign In
       </Link>
-      <Link className="sign-up" to="sign-up">
+      <Link className="sign-up-button" to="sign-up">
         Sign Up
       </Link>
     </div>

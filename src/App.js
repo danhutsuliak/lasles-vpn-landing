@@ -7,6 +7,7 @@ import FeaturesPage from './pages/features/features.component';
 import TestimonialsPage from './pages/testimonials-page/testimonials-page.component';
 import PricingPage from './pages/pricing-page/pricing-page.component';
 import HelpPage from './pages/help-page/help-page.component';
+import SignUpPage from './pages/sign-up/sign-up.component';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path='testimonials' element={<TestimonialsPage />} />
           <Route path='pricing' element={<PricingPage />} />
           <Route path='help' element={<HelpPage />} />
+          <Route path='sign-up' element={<SignUpPage />} />
         </Route>
       </Routes>
     </div>
