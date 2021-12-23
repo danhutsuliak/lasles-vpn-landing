@@ -7,7 +7,7 @@ import { ReactComponent as StarIcon } from '../../assets/star-icon.svg';
 const Testimonial = ({ image, name, location, rating, text, isRed }) => (
   <div className={`testimonial ${isRed ? 'red' : ''}`}>
     <div className="user-container">
-      <img src={image} alt="user" />
+      <img src={process.env.PUBLIC_URL + image} alt="user" />
       <div className="name-location">
         <h3>{name}</h3>
         <p>{location}</p>

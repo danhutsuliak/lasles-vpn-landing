@@ -10,12 +10,12 @@ export const FaqsContext = createContext({
     {
       id: 2,
       question: 'Can you be tracked if you use a VPN?',
-      answer: 'VPN gives you a new IP address and encrypts the connection between your device and the internet, so no one can see what data you send and receive. But it won’t make you anonymous — there are other ways someone could track your actions online. Hackers could install malware (keyloggers, spyware, etc.) on your device. Or if you overshare online and use the same username everywhere, anyone with decent googling skills can gather a wealth of information about you.'
+      answer: "VPN gives you a new IP address and encrypts the connection between your device and the internet, so no one can see what data you send and receive. But it won’t make you anonymous — there are other ways someone could track your actions online. Hackers could install malware (keyloggers, spyware, etc.) on your device. Or if you overshare online and use the same username everywhere, anyone with decent googling skills can gather a wealth of information about you."
     },
     {
       id: 3,
       question: 'Is using a VPN legal?',
-      answer: 'VPNs are legal in many countries, but some have banned VPNs altogether or heavily regulate their usage. It’s possible to use a VPN connection to bypass government censorship and gain internet access in countries like these. If you decide to do it, make sure to download the apps and get your subscription before traveling there.'
+      answer: "VPNs are legal in many countries, but some have banned VPNs altogether or heavily regulate their usage. It’s possible to use a VPN connection to bypass government censorship and gain internet access in countries like these. If you decide to do it, make sure to download the apps and get your subscription before traveling there."
     },
     {
       id: 4,
@@ -25,7 +25,7 @@ export const FaqsContext = createContext({
     {
       id: 5,
       question: 'Is a virtual private network safe to use?',
-      answer: 'If you choose a trustworthy VPN service provider, using it is absolutely safe. What is a VPN provider you can’t trust? The one that says it’s free. It will track your online activity, what websites you visit, the content you interact with, and sell it to the highest bidder. Why? Because they must maintain hundreds of servers in different countries and hire people to take care of the infrastructure. A service that big has to make money somehow, so you end up paying for it in some way. Besides, a free VPN won’t encrypt your connection properly; they are also prone to IP and DNS leaks and might even contain malware or spy on your entire local network. All of this means that if you do your research and choose the best VPN provider out there, using a VPN isn’t dangerous.'
+      answer: "If you choose a trustworthy VPN service provider, using it is absolutely safe. What is a VPN provider you can’t trust? The one that says it’s free. It will track your online activity, what websites you visit, the content you interact with, and sell it to the highest bidder. Why? Because they must maintain hundreds of servers in different countries and hire people to take care of the infrastructure. A service that big has to make money somehow, so you end up paying for it in some way. Besides, a free VPN won’t encrypt your connection properly; they are also prone to IP and DNS leaks and might even contain malware or spy on your entire local network. All of this means that if you do your research and choose the best VPN provider out there, using a VPN isn’t dangerous."
     },
     {
       id: 6,

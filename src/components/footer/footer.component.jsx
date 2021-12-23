@@ -17,17 +17,21 @@ const Footer = () => (
         <a href="https://facebook.com/">
           <img
             className="icon"
-            src="./images/facebook.svg"
+            src={process.env.PUBLIC_URL + '/images/facebook.svg'}
             alt="facebook"
           ></img>
         </a>
         <a href="https://twitter.com/">
-          <img className="icon" src="./images/twitter.svg" alt="twitter"></img>
+          <img
+            className="icon"
+            src={process.env.PUBLIC_URL + '/images/twitter.svg'}
+            alt="twitter"
+          ></img>
         </a>
         <a href="https://instagram.com/">
           <img
             className="icon"
-            src="./images/instagram.svg"
+            src={process.env.PUBLIC_URL + '/images/instagram.svg'}
             alt="instagram"
           ></img>
         </a>

@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './faq.styles.scss';
 import { ReactComponent as Arrow } from '../../assets/arrow.svg';
-import { useState } from 'react/cjs/react.development';
 
 const Faq = ({ question, answer }) => {
   const [isActive, setActive] = useState(false);
