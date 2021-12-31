@@ -1,5 +1,6 @@
 import { initializeApp } from 'firebase/app';
-import 'firebase/firestore';
+import { collection, getDocs, getFirestore } from 'firebase/firestore';
+import { getAuth } from 'firebase/auth';
 
 const config = {
   apiKey: "AIzaSyB9lyQ-CY5kwK2gRpAjZkDW_CfER8KnyPE",
@@ -11,4 +12,21 @@ const config = {
   measurementId: "G-6B4WWGKWYZ"
 };
 
-initializeApp(config);
+const app = initializeApp(config);
+
+export const db = getFirestore(app);
+export const auth = getAuth(app);
+
+export async function getTestimonials(db) {
+  const testimonialsCol = collection(db, 'testimonials');
+  const testimonialSnapshot = await getDocs(testimonialsCol);
+  const testimonialList = testimonialSnapshot.docs.map(doc => doc.data());
+  return testimonialList;
+}
+
+export async function getFaqs(db) {
+  const FaqsCol = collection(db, 'faqs');
+  const FaqSnapshot = await getDocs(FaqsCol);
+  const FaqList = FaqSnapshot.docs.map(doc => doc.data());
+  return FaqList;
+}

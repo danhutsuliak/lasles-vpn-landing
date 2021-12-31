@@ -3,6 +3,7 @@
   align-items: center;
   width: 100%;
   flex-direction: column;
+  margin-top: 3.5%;
   margin-bottom: 10%;
 
   .text-container {
@@ -31,7 +32,7 @@
 
     .plan-card {
       width: 27.5%;
-      height: 620px;
+      height: fit-content;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -66,7 +67,7 @@
           .list-item {
             font-size: 15px;
             color: #4f5665;
-            margin-bottom: 17px;
+            margin-bottom: 0.9rem;
             display: flex;
             width: 100%;
             align-items: center;

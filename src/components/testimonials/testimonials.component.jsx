@@ -1,12 +1,23 @@
-import React, { useContext, useState } from 'react';
-import { TestimonialContext } from '../../contexts/testimonial.context.js';
+// import React, { useContext, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+// import { TestimonialContext } from '../../contexts/testimonial.context.js';
 import Testimonial from '../testimonial/testimonial.component';
 
 import './testimonials.styles.scss';
 
+import { db, getTestimonials } from '../../firebase/firebase.utils.js';
+
 const Testimonials = () => {
   const [activeIndex, setActiveIndex] = useState(0.375);
-  const { testimonials } = useContext(TestimonialContext);
+  const [testimonials, setTestimonials] = useState([]);
+  const [isFetching, setFetching] = useState(true);
+
+  useEffect(() => {
+    getTestimonials(db).then((testimonials) => {
+      setTestimonials(testimonials);
+    });
+    setFetching(false);
+  }, []);
 
   const carouselStep = 0.1875;
 
@@ -33,17 +44,19 @@ const Testimonials = () => {
           className="inner"
           style={{ transform: `translateX(${activeIndex * 100}%)` }}
         >
-          {testimonials.map((t) => (
-            <Testimonial
-              key={t.id}
-              name={t.name}
-              location={t.location}
-              image={t.image}
-              rating={t.rating}
-              text={t.text}
-              isRed={t.isRed}
-            />
-          ))}
+          {isFetching
+            ? 'Loading'
+            : testimonials.map((t) => (
+                <Testimonial
+                  key={t.id}
+                  name={t.name}
+                  location={t.location}
+                  image={t.image}
+                  rating={t.rating}
+                  text={t.text}
+                  isRed={t.isRed}
+                />
+              ))}
         </div>
       </div>
       <div className="indicators">

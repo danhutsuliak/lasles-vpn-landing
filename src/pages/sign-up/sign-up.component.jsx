@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import FormInput from '../../components/form-input/form-input.component';
+// import { createUserWithEmailAndPassword } from 'firebase/auth';
 
 import './sign-up.styles.scss';
+// import { auth } from '../../firebase/firebase.utils';
 
 const SignUpPage = () => {
   const [userCredentials, setUserCredentials] = useState({
@@ -11,7 +13,13 @@ const SignUpPage = () => {
     confirmPassword: '',
   });
 
-  const handleSubmit = async (event) => {};
+  const { displayName, email, password, confirmPassword } = userCredentials;
+  const handleSubmit = async (event) => {
+    // createUserWithEmailAndPassword(auth, email, password)
+    // .then((userCredential) => {
+    // setUser(userCredential)
+    // });
+  };
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -27,28 +35,28 @@ const SignUpPage = () => {
           type="text"
           name="displayName"
           label="Display Name"
-          value={userCredentials.displayName}
+          value={displayName}
           onChange={handleChange}
         />
         <FormInput
           type="email"
           name="email"
           label="Email"
-          value={userCredentials.email}
+          value={email}
           onChange={handleChange}
         />
         <FormInput
           type="password"
           name="password"
           label="Password"
-          value={userCredentials.password}
+          value={password}
           onChange={handleChange}
         />
         <FormInput
           type="password"
           name="confirmPassword"
           label="Confirm Password"
-          value={userCredentials.confirmPassword}
+          value={confirmPassword}
           onChange={handleChange}
         />
 
