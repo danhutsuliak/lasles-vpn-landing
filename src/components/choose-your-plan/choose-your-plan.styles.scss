@@ -97,12 +97,19 @@
           height: 45px;
           text-align: center;
           vertical-align: middle;
-          line-height: 45px;
+          line-height: 41px;
           background-color: #fff;
           color: #f53855;
           border: 2px solid #f53855;
           border-radius: 50px;
           font-weight: 700;
+          transition: 0.3s;
+
+          &:hover {
+            background-color: #f53838;
+            color: #fff;
+            cursor: pointer;
+          }
         }
       }
     }
@@ -113,6 +120,12 @@
       .card-bottom .button {
         background: #f53838;
         color: #fff;
+
+        &:hover {
+          background: #fff;
+          color: #f53855;
+          cursor: pointer;
+        }
       }
     }
   }

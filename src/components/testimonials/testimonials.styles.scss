@@ -71,6 +71,11 @@
         height: 60px;
         border: none;
         background-image: url(../../assets/prev-btn.svg);
+        transition: 0.3s;
+
+        &:hover {
+          background-image: url(../../assets/prev-btn-active.svg);
+        }
       }
 
       .next {
@@ -78,6 +83,11 @@
         height: 60px;
         border: none;
         background-image: url(../../assets/next-btn.svg);
+        transition: 0.3s;
+
+        &:hover {
+          background-image: url(../../assets/next-btn-active.svg);
+        }
       }
     }
   }
