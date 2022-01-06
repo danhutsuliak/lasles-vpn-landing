@@ -25,7 +25,11 @@
       color: #4f5665;
     }
 
-    button {
+    .get-started {
+      display: block;
+      text-decoration: none;
+      text-align: center;
+      line-height: 65px;
       width: 270px;
       height: 65px;
       margin-top: 30px;

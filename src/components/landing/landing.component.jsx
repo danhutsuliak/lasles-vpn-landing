@@ -2,6 +2,7 @@ import React from 'react';
 
 import './landing.styles.scss';
 import personBrowsing from '../../assets/person-browsing.png';
+import { Link } from 'react-router-dom';
 
 const Landing = () => (
   <div className="landing">
@@ -14,7 +15,9 @@ const Landing = () => (
         <span className="bold"> LaslesVPN </span>
         discover interesting features from us.
       </p>
-      <button>Get Started</button>
+      <Link to="features" className="get-started">
+        Get Started
+      </Link>
     </div>
     <div className="img-container">
       <img src={personBrowsing} alt="person with a laptop" />

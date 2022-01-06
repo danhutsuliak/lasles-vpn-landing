@@ -79,16 +79,20 @@ header {
   }
 
   .sign-in-sign-up-container {
+    cursor: default;
     display: flex;
     align-items: center;
-    width: max-content;
     margin: 0;
-    column-gap: 2rem;
+    column-gap: 1.8rem;
     font-weight: 500;
     font-size: 18px;
 
     .sign-in-button {
       width: max-content;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     .sign-up-button {
@@ -102,6 +106,31 @@ header {
       border: 2px solid #f53855;
       border-radius: 50px;
       filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .signed-user {
+      font-size: 16px;
+      font-weight: 420;
+      text-decoration: underline;
+      cursor: default;
+    }
+
+    .sign-out {
+      background: none;
+      border: none;
+      font-family: 'Rubik', sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+      margin: 0;
+      height: 100%;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }

@@ -1,24 +1,25 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { Navigate } from 'react-router-dom';
 import FormInput from '../../components/form-input/form-input.component';
+import UserContext from '../../contexts/user/user.context';
 // import { createUserWithEmailAndPassword } from 'firebase/auth';
 
 import './sign-up.styles.scss';
-// import { auth } from '../../firebase/firebase.utils';
 
 const SignUpPage = () => {
+  const { user, signUpUser } = useContext(UserContext);
+
   const [userCredentials, setUserCredentials] = useState({
-    displayName: '',
     email: '',
     password: '',
     confirmPassword: '',
   });
 
-  const { displayName, email, password, confirmPassword } = userCredentials;
+  const { email, password, confirmPassword } = userCredentials;
   const handleSubmit = async (event) => {
-    // createUserWithEmailAndPassword(auth, email, password)
-    // .then((userCredential) => {
-    // setUser(userCredential)
-    // });
+    event.preventDefault();
+
+    signUpUser(email, password);
   };
 
   const handleChange = (event) => {
@@ -27,17 +28,12 @@ const SignUpPage = () => {
     setUserCredentials({ ...userCredentials, [name]: value });
   };
 
-  return (
+  return user.currentUser ? (
+    <Navigate replace to="/"></Navigate>
+  ) : (
     <div className="sign-up">
       <h2 className="header">Sign Up</h2>
       <form className="sign-up-form" onSubmit={handleSubmit}>
-        <FormInput
-          type="text"
-          name="displayName"
-          label="Display Name"
-          value={displayName}
-          onChange={handleChange}
-        />
         <FormInput
           type="email"
           name="email"
