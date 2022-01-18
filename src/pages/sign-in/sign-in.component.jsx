@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Navigate } from 'react-router-dom';
 import FormInput from '../../components/form-input/form-input.component';
 import UserContext from '../../contexts/user/user.context';
@@ -9,6 +9,8 @@ import './sign-in.styles.scss';
 const USER_ERROR_MESSAGES = {
   'auth/user-not-found': 'User not found. Please try again',
   'auth/wrong-password': 'Wrong password. Please try again',
+  'auth/too-many-requests':
+    'Too many failed login attempts. You can reset your password or try again later.',
 };
 
 const SignInPage = () => {
@@ -17,6 +19,20 @@ const SignInPage = () => {
     email: '',
     password: '',
   });
+  const [errorMessage, setErrorMessage] = useState('');
+
+  useEffect(() => {
+    function handleError() {
+      setErrorMessage(
+        USER_ERROR_MESSAGES[user.error.code]
+          ? USER_ERROR_MESSAGES[user.error.code]
+          : user.error.message.slice(10)
+      );
+    }
+    if (user.error && user.error.type === 'sign-in') {
+      handleError();
+    }
+  }, [user]);
 
   const { email, password } = userCredentials;
   const handleSubmit = async (event) => {
@@ -52,14 +68,7 @@ const SignInPage = () => {
           onChange={handleChange}
         />
 
-        {
-          <p className="sign-in-failed-text">
-            {user.error &&
-              (USER_ERROR_MESSAGES[user.error.code]
-                ? USER_ERROR_MESSAGES[user.error.code]
-                : user.error.message.slice(10))}
-          </p>
-        }
+        <p className="error-message">{user.error && errorMessage}</p>
 
         <button type="submit" className="sign-in-button">
           Sign In

@@ -1,10 +1,16 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Navigate } from 'react-router-dom';
 import FormInput from '../../components/form-input/form-input.component';
 import UserContext from '../../contexts/user/user.context';
-// import { createUserWithEmailAndPassword } from 'firebase/auth';
 
 import './sign-up.styles.scss';
+
+const USER_ERROR_MESSAGES = {
+  'auth/user-not-found': 'User not found. Please try again',
+  'auth/wrong-password': 'Wrong password. Please try again',
+  'auth/weak-password': 'Password should be at least 6 characters.',
+  'auth/email-already-in-use': 'Email is already used.',
+};
 
 const SignUpPage = () => {
   const { user, signUpUser } = useContext(UserContext);
@@ -14,6 +20,23 @@ const SignUpPage = () => {
     password: '',
     confirmPassword: '',
   });
+  const [errorMessage, setErrorMessage] = useState('');
+
+  useEffect(() => {
+    function handleError() {
+      setErrorMessage(
+        USER_ERROR_MESSAGES[user.error.code]
+          ? USER_ERROR_MESSAGES[user.error.code]
+          : user.error.message.slice(10)
+      );
+    }
+    if (user.error && user.error.type === 'sign-up') {
+      handleError();
+    }
+    return () => {
+      user.error = null;
+    };
+  }, [user]);
 
   const { email, password, confirmPassword } = userCredentials;
   const handleSubmit = async (event) => {
@@ -55,6 +78,8 @@ const SignUpPage = () => {
           value={confirmPassword}
           onChange={handleChange}
         />
+
+        <p className="error-message">{user.error && errorMessage}</p>
 
         <button type="submit" className="sign-up-button">
           Sign Up

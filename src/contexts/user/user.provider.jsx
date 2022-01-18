@@ -19,6 +19,7 @@ const UserProvider = ({ children }) => {
         });
       })
       .catch((error) => {
+        error.type = 'sign-in';
         console.log({ error });
         setUser({
           currentUser: null,
@@ -36,9 +37,12 @@ const UserProvider = ({ children }) => {
         });
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
+        error.type = 'sign-up';
+        console.log({ error });
+        setUser({
+          currentUser: null,
+          error: error,
+        });
       });
   };
 
