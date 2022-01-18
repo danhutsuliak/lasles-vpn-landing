@@ -1,6 +1,4 @@
-// import React, { useContext, useState } from 'react';
 import React, { useEffect, useState } from 'react';
-// import { TestimonialContext } from '../../contexts/testimonial.context.js';
 import Testimonial from '../testimonial/testimonial.component';
 
 import './testimonials.styles.scss';
