@@ -8,7 +8,7 @@ import './testimonials.styles.scss';
 import { db, getTestimonials } from '../../firebase/firebase.utils.js';
 
 const Testimonials = () => {
-  const [activeIndex, setActiveIndex] = useState(0.375);
+  const [activeIndex, setActiveIndex] = useState(0);
   const [testimonials, setTestimonials] = useState([]);
   const [isFetching, setFetching] = useState(true);
 
@@ -19,13 +19,13 @@ const Testimonials = () => {
     setFetching(false);
   }, []);
 
-  const carouselStep = 0.1875;
+  const carouselStep = 0.25;
 
   const updateIndex = (newIndex) => {
-    if (newIndex < -0.375) {
-      newIndex = -0.375;
-    } else if (newIndex >= 0.375) {
-      newIndex = 0.375;
+    if (newIndex < 0) {
+      newIndex = 0;
+    } else if (newIndex >= 0.75) {
+      newIndex = 0.75;
     }
     setActiveIndex(newIndex);
   };
@@ -42,7 +42,7 @@ const Testimonials = () => {
       <div className="carousel">
         <div
           className="inner"
-          style={{ transform: `translateX(${activeIndex * 100}%)` }}
+          style={{ transform: `translateX(${-activeIndex * 100}%)` }}
         >
           {isFetching
             ? 'Loading'
@@ -61,35 +61,27 @@ const Testimonials = () => {
       </div>
       <div className="indicators">
         <div className="page-count">
-          <div className={`circle ${activeIndex === 0.375 ? 'current' : ''}`} />
-
-          <div
-            className={`circle ${activeIndex === 0.1875 ? 'current' : ''}`}
-          />
-
           <div className={`circle ${activeIndex === 0 ? 'current' : ''}`} />
 
-          <div
-            className={`circle ${activeIndex === -0.1875 ? 'current' : ''}`}
-          />
+          <div className={`circle ${activeIndex === 0.25 ? 'current' : ''}`} />
 
-          <div
-            className={`circle ${activeIndex === -0.375 ? 'current' : ''}`}
-          />
+          <div className={`circle ${activeIndex === 0.5 ? 'current' : ''}`} />
+
+          <div className={`circle ${activeIndex === 0.75 ? 'current' : ''}`} />
         </div>
 
         <div className="buttons">
           <div
             className="prev"
             onClick={() => {
-              updateIndex(activeIndex + carouselStep);
+              updateIndex(activeIndex - carouselStep);
             }}
           ></div>
 
           <div
             className="next"
             onClick={() => {
-              updateIndex(activeIndex - carouselStep);
+              updateIndex(activeIndex + carouselStep);
             }}
           ></div>
         </div>

@@ -1,6 +1,5 @@
 .testimonials {
   display: flex;
-  align-items: center;
   width: 100%;
   flex-direction: column;
   margin-bottom: 10%;
@@ -25,8 +24,6 @@
   }
 
   .carousel {
-    overflow: hidden;
-
     .inner {
       display: inline-flex;
       column-gap: 50px;
@@ -37,12 +34,14 @@
   .indicators {
     display: flex;
     justify-content: space-between;
+    align-self: center;
     align-items: center;
     margin-top: 70px;
     width: 85%;
 
     .page-count {
       display: flex;
+      height: 20px;
       column-gap: 15px;
       transition: 0.3s;
 
