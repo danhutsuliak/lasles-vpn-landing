@@ -1,8 +1,8 @@
 .landing {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   margin-bottom: 10%;
+  column-gap: 3rem;
 
   .info-container {
     .bold {
@@ -11,7 +11,7 @@
 
     .header {
       display: block;
-      width: 555px;
+      width: max-content;
       font-style: normal;
       font-weight: 500;
       font-size: 52px;
@@ -19,7 +19,8 @@
     }
 
     .sub-header {
-      width: 570px;
+      max-width: 570px;
+      word-wrap: break-word;
       font-size: 17px;
       line-height: 30px;
       color: #4f5665;

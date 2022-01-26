@@ -10,6 +10,7 @@ const USER_ERROR_MESSAGES = {
   'auth/wrong-password': 'Wrong password. Please try again',
   'auth/weak-password': 'Password should be at least 6 characters.',
   'auth/email-already-in-use': 'Email is already used.',
+  '': '',
 };
 
 const SignUpPage = () => {
@@ -42,6 +43,11 @@ const SignUpPage = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
+    if (password !== confirmPassword) {
+      setErrorMessage('Passwords do not match');
+      return;
+    }
+
     signUpUser(email, password);
   };
 
@@ -63,6 +69,7 @@ const SignUpPage = () => {
           label="Email"
           value={email}
           onChange={handleChange}
+          required
         />
         <FormInput
           type="password"
@@ -70,6 +77,7 @@ const SignUpPage = () => {
           label="Password"
           value={password}
           onChange={handleChange}
+          required
         />
         <FormInput
           type="password"
@@ -77,9 +85,10 @@ const SignUpPage = () => {
           label="Confirm Password"
           value={confirmPassword}
           onChange={handleChange}
+          required
         />
 
-        <p className="error-message">{user.error && errorMessage}</p>
+        <p className="error-message">{errorMessage}</p>
 
         <button type="submit" className="sign-up-button">
           Sign Up

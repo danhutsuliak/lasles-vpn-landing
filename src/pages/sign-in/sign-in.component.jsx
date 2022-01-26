@@ -9,8 +9,7 @@ import './sign-in.styles.scss';
 const USER_ERROR_MESSAGES = {
   'auth/user-not-found': 'User not found. Please try again',
   'auth/wrong-password': 'Wrong password. Please try again',
-  'auth/too-many-requests':
-    'Too many failed login attempts. You can reset your password or try again later.',
+  'auth/too-many-requests': 'Too many failed login attempts. Try again later.',
 };
 
 const SignInPage = () => {
@@ -59,6 +58,7 @@ const SignInPage = () => {
           label="Email"
           value={email}
           onChange={handleChange}
+          required
         />
         <FormInput
           type="password"
@@ -66,6 +66,7 @@ const SignInPage = () => {
           label="Password"
           value={password}
           onChange={handleChange}
+          required
         />
 
         <p className="error-message">{user.error && errorMessage}</p>

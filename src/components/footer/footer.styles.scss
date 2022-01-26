@@ -12,7 +12,7 @@ footer {
     left: -10vw;
     top: 0px;
     height: 100%;
-    width: 98.9vw;
+    width: 110vw;
   }
 
   .about-block {
@@ -53,7 +53,8 @@ footer {
 
   .options {
     display: flex;
-    column-gap: 126px;
+    justify-content: space-between;
+    width: 47%;
 
     .block {
       display: flex;

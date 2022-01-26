@@ -8,7 +8,8 @@ const Landing = () => (
   <div className="landing">
     <div className="info-container">
       <h1 className="header">
-        Want anything to be easy with <span className="bold">LaslesVPN.</span>
+        Want anything to be
+        <br /> easy with <span className="bold">LaslesVPN.</span>
       </h1>
       <p className="sub-header">
         Provide a network for all your needs with ease and fun using
