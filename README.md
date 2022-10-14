@@ -1,6 +1,8 @@
 # Lasles VPN Landing Page
 
-A desktop landing page made with React.js from a Figma template [Visit](https://danhutsuliak.github.io/lasles-vpn-landing/)
+A desktop landing page made with React.js from a Figma template 
+
+*[Visit](https://danhutsuliak.github.io/lasles-vpn-landing/)*
 
 **[Figma Template](https://www.figma.com/file/k3SjmCZWoPKNx7d3XZ0K29/FREEBIES-Landingpage-LaslesVPN-(Community)?node-id=1%3A2)**
 
