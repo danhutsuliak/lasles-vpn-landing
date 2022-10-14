@@ -4,7 +4,7 @@ This project was made with [Create React App](https://github.com/facebook/create
 
 ## Stack
 
-Stack for this project: *React.js, SCSS, Firebase Firestore, GitHub Pages*
+Stack for this project: **React.js, SCSS, Firebase Firestore, GitHub Pages**
 
 ## Learn
 
